@@ -1,0 +1,164 @@
+/* CSS Variables for Color Palette */
+:root {
+    --primary-color: #95292D;
+    --secondary-color: #E2B0A5;
+    --accent-color: #6D3871;
+    --dark-color: #1A3567;
+    --light-bg: #ffffff;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--dark-color);
+    background-color: var(--light-bg);
+}
+
+h1, h2, h3 {
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+/* Navbar Logo Fix */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+.logo-img {
+    height: 45px;
+    width: auto;
+    display: block;
+    object-fit: contain;
+}
+
+/* Add Project Section */
+.add-project-section {
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--secondary-color), var(--light-bg));
+}
+
+.add-project-section h2 {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.add-project-section h3 {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Form Styles */
+form {
+    background-color: var(--light-bg);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.form-label {
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+.form-control {
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(149, 41, 45, 0.25);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+/* Projects List */
+#projectsList .card {
+    background-color: var(--light-bg);
+    border: none;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s;
+}
+
+#projectsList .card:hover {
+    transform: translateY(-5px);
+}
+
+#projectsList .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+#projectsList .card-title {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+#projectsList .card-text {
+    color: var(--dark-color);
+}
+
+#projectsList .btn {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--light-bg);
+    font-weight: 600;
+}
+
+#projectsList .btn:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-color);
+    color: var(--light-bg);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .add-project-section {
+        padding: 3rem 1rem;
+    }
+
+    .form-control {
+        font-size: 0.9rem;
+    }
+
+    #projectsList .card {
+        margin-bottom: 1rem;
+    }
+}

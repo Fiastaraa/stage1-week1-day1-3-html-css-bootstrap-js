@@ -23,6 +23,13 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
+            <!-- Separate buttons for Project and My Task on the right -->
+            <div class="d-none d-lg-flex ms-auto me-3">
+                <a href="addproject.html" class="btn btn-outline-light me-2">Project</a>
+                <a href="mytask.html" class="btn btn-outline-light">My Task</a>
+            </div>
+
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
@@ -124,22 +131,12 @@
     <section id="portfolio">
         <div class="container">
             <h2>Portfolio</h2>
-            <div class="portfolio-grid">
-                <article class="portfolio-card">
-                    <h3>IBM Academy Final Project</h3>
-                    <p>Individual final project involving AI, hybrid cloud, and cybersecurity concepts.</p>
-                    <a href="#" class="project-link">View Project</a>
-                </article>
-                <article class="portfolio-card">
-                    <h3>Mobile Application at Nongsa SEZ</h3>
-                    <p>Mobile application and cloud-based solution developed during internship.</p>
-                    <a href="#" class="project-link">View Project</a>
-                </article>
-                <article class="portfolio-card">
-                    <h3>Humanity First Indonesia Platform</h3>
-                    <p>Responsive UI/UX designs implemented using WordPress for the digital platform.</p>
-                    <a href="#" class="project-link">View Project</a>
-                </article>
+            <div class="text-center mb-4">
+                <a href="addproject.html" class="btn btn-primary me-2">Manage Projects</a>
+                <a href="addtask.html" class="btn btn-secondary">Add Client Task</a>
+            </div>
+            <div id="portfolioGrid" class="portfolio-grid">
+                <!-- Projects will be loaded dynamically -->
             </div>
         </div>
     </section>
