@@ -3,226 +3,201 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fiastara Arthanev - Full-Stack Developer Portfolio</title>
+    <title>Fiastara Seikha Arthanev - Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <header>
+    <!-- Navbar Menggunakan Bootstrap 5 -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="#">Fiastara Arthanev</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="#">
+            <!-- Tambahkan class 'logo-img' untuk kontrol lebih mudah di CSS -->
+                <img src="img/logo.jpg" alt="Logo Fiastara" class="logo-img">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#skills">Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#blog">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
+    </header>
 
-
-    <section id="hero" class="d-flex align-items-center justify-content-center vh-100 bg-primary text-white">
-        <div class="container text-center">
-            <h1 class="display-4 fw-bold mb-3">Welcome to My Portfolio</h1>
-            <p class="lead mb-4">Full-Stack Developer | Business Intelligence | Creative Thinker</p>
-            <div class="d-flex justify-content-center gap-3">
-                <a href="#contact" class="btn btn-light btn-lg">Get In Touch Here</a>
-                <a href="img/Fiastara Arthanev _ Cake.pdf" download class="btn btn-outline-light btn-lg">Download PDF</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="py-5">
+    <!-- Hero Section Responsif -->
+    <section id="hero" class="py-5 d-flex align-items-center" style="min-height: 100vh; background: #ffffff;">
         <div class="container">
-            <h2 class="text-center mb-5">About Me</h2>
-            <div class="row align-items-center">
-                <div class="col-lg-4 text-center">
-                    <img src="img/fiastara.jpg" alt="Profile Picture" class="img-fluid rounded-circle shadow mb-4" style="max-width: 200px;">
+            <div class="row align-items-center flex-column-reverse flex-md-row">
+            <!-- Teks Hero -->
+            <div class="col-md-7 mt-5 mt-md-0 text-center text-md-start">
+                <h1 class="display-4 fw-bold mb-3" style="color: #95292D;">Fiastara Seikha Arthanev</h1>
+                <p class="lead text-dark mb-4" style="line-height: 1.8; text-align: justify;">
+                    With 5 years of experience in computer science and expertise in information systems, I have a strong background in office management, data analytics, UI/UX design, and mobile application development. I have a strong enthusiasm for data science and Android development.
+                </p>
+                <div class="mb-4">
+                    <p class="mb-1"><i class="fas fa-map-marker-alt me-2" style="color: #95292D;"></i>South Tangerang City, Banten, Indonesia</p>
                 </div>
-                <div class="col-lg-8">
-                    <p class="lead">Hello! I'm a passionate developer with experience in Full-Stack Development, Business Intelligence, and Creating Innovative Solutions. I love sharing my knowledge through my blog and building projects that make a difference.</p>
-                    <p>With a background in computer science and a keen interest in emerging technologies, I strive to create user-friendly and efficient applications.</p>
+                
+                <!-- Group Button -->
+                <div class="d-grid d-md-flex gap-3 justify-content-center justify-content-md-start">
+                    <a href="#contact" class="btn btn-lg px-4 fw-bold" style="background-color: #95292D; color: white; border: none;">
+                        Get In Touch
+                    </a>
+                    <a href="img/CV-fiastara.pdf" download="CV_Fiastara.pdf" class="btn btn-lg px-4 fw-bold" style="border: 2px solid #95292D; color: #95292D; background: transparent;">
+                        <i class="fas fa-download me-2"></i>Download CV
+                    </a>
+                </div>
+            </div>
+
+            <!-- Foto Hero -->
+            <div class="col-md-5 text-center">
+                <div class="position-relative d-inline-block">
+                    <img src="img/fiastara.jpg" alt="Fiastara" class="img-fluid rounded-circle shadow-lg" 
+                         style="width: 320px; height: 320px; object-fit: cover; border: 8px solid #f8f9fa;">
                 </div>
             </div>
         </div>
+    </div>
     </section>
 
-    <section id="skills" class="py-5 bg-light">
-        <div class="container-fluid">
-            <h2 class="text-center mb-5">Skills</h2>
-            <div class="row g-4 justify-content-center">
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body text-center">
-                            <h3 class="card-title">Frontend</h3>
-                            <ul class="list-unstyled">
-                                <li>HTML5</li>
-                                <li>CSS3</li>
-                                <li>JavaScript</li>
-                                <li>React</li>
-                                <li>Flutter</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body text-center">
-                            <h3 class="card-title">Backend</h3>
-                            <ul class="list-unstyled">
-                                <li>Node.js</li>
-                                <li>Python</li>
-                                <li>PHP</li>
-                                <li>MySQL</li>
-                                <li>MongoDB</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body text-center">
-                            <h3 class="card-title">Tools</h3>
-                            <ul class="list-unstyled">
-                                <li>Git</li>
-                                <li>Python</li>
-                                <li>AWS</li>
-                                <li>VS Code</li>
-                                <li>Figma</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="py-5">
+    <section id="experience">
         <div class="container">
-            <h2 class="text-center mb-5">Projects</h2>
-            <div class="row g-4 justify-content-center">
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body d-flex flex-column">
-                            <h3 class="card-title">E-commerce Platform</h3>
-                            <p class="card-text flex-grow-1">A full-stack e-commerce website built with React and Node.js.</p>
-                            <a href="#" class="btn btn-primary mt-auto">View Project</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body d-flex flex-column">
-                            <h3 class="card-title">Blog CMS</h3>
-                            <p class="card-text flex-grow-1">A content management system for bloggers, featuring rich text editing and SEO optimization.</p>
-                            <a href="#" class="btn btn-primary mt-auto">View Project</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body d-flex flex-column">
-                            <h3 class="card-title">Portfolio Website</h3>
-                            <p class="card-text flex-grow-1">A responsive portfolio website showcasing my work and skills.</p>
-                            <a href="#" class="btn btn-primary mt-auto">View Project</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="blog">
-        <div class="container">
-            <h2>Latest Blog Posts</h2>
-            <div class="blog-grid">
-                <article class="blog-post">
-                    <h3><a href="#">Getting Started with React Hooks</a></h3>
-                    <p>Learn how to use React Hooks to manage state and side effects in your functional components.</p>
-                    <span class="date">Published on: October 15, 2023</span>
+            <h2>Experience / Work Process</h2>
+            <div class="experience-grid">
+                <article class="experience-card">
+                    <h3>IBM Academy Intern</h3>
+                    <p><strong>Aug 2023 - Jan 2024</strong></p>
+                    <p>Participated in instructor-led classes and hands-on workshops to learn about AI, hybrid cloud, and cybersecurity.</p>
                 </article>
-                <article class="blog-post">
-                    <h3><a href="#">Building RESTful APIs with Node.js</a></h3>
-                    <p>A comprehensive guide to creating robust RESTful APIs using Express.js and Node.js.</p>
-                    <span class="date">Published on: September 28, 2023</span>
+                <article class="experience-card">
+                    <h3>Front End Developer Intern</h3>
+                    <p><strong>Mar 2023 - Aug 2023</strong></p>
+                    <p>Collaborating with the IT team in the development and maintenance of the Humanity First Indonesia digital platform. Designing and implementing responsive UI/UX interface designs using WordPress.</p>
                 </article>
-                <article class="blog-post">
-                    <h3><a href="#">CSS Grid vs Flexbox: When to Use Which</a></h3>
-                    <p>Understanding the differences between CSS Grid and Flexbox and when to use each layout method.</p>
-                    <span class="date">Published on: September 10, 2023</span>
+                <article class="experience-card">
+                    <h3>Mobile App and Cloud Dev Intern</h3>
+                    <p><strong>Mar 2022 - Aug 2022</strong></p>
+                    <p>Leading the design and development of mobile applications and solutions for assigned topics.</p>
                 </article>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="py-5">
+    <section id="skills">
         <div class="container">
-            <h2 class="text-center mb-5">Get In Touch</h2>
-            <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <form>
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="name" name="name" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" name="email" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="phone" class="form-label">Phone Number</label>
-                            <input type="tel" class="form-control" id="phone" name="phone" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="subject" class="form-label">Subject</label>
-                            <select class="form-control" id="subject" name="subject" required>
-                                <option value="">Select a subject</option>
-                                <option value="employment contract">Employment Contract</option>
-                                <option value="consultation">Consultation</option>
-                                <option value="coffee meeting">Coffee Meeting</option>
-                            </select>
-                        </div>
-                        <div class="mb-3">
-                            <label for="message" class="form-label">Your Message</label>
-                            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Technical Skills</h3>
+                    <ul>
+                        <li>Communication</li>
+                        <li>Analytical Thinking</li>
+                        <li>Problem-Solving</li>
+                        <li>Leadership</li>
+                        <li>HTML5</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>Android Studio</li>
+                        <li>UI/UX Figma</li>
+                        <li>Robotic Process Automation (RPA)</li>
+                        <li>Data Analyst</li>
+                        <li>Python for data science</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
- 
-    <footer class="bg-dark text-light py-4">
+
+    <section id="portfolio">
         <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <p class="mb-0">&copy; 2026 Fiastara Arthanev. All rights reserved.</p>
-                </div>
-                <div class="col-md-6 text-md-end">
-                    <p class="mb-0">Connect with me:
-                        <a href="#" target="_blank" class="text-light me-2">LinkedIn</a> |
-                        <a href="#" target="_blank" class="text-light me-2">GitHub</a> |
-                        <a href="#" target="_blank" class="text-light">Twitter</a>
-                    </p>
-                </div>
+            <h2>Portfolio</h2>
+            <div class="portfolio-grid">
+                <article class="portfolio-card">
+                    <h3>IBM Academy Final Project</h3>
+                    <p>Individual final project involving AI, hybrid cloud, and cybersecurity concepts.</p>
+                    <a href="#" class="project-link">View Project</a>
+                </article>
+                <article class="portfolio-card">
+                    <h3>Mobile Application at Nongsa SEZ</h3>
+                    <p>Mobile application and cloud-based solution developed during internship.</p>
+                    <a href="#" class="project-link">View Project</a>
+                </article>
+                <article class="portfolio-card">
+                    <h3>Humanity First Indonesia Platform</h3>
+                    <p>Responsive UI/UX designs implemented using WordPress for the digital platform.</p>
+                    <a href="#" class="project-link">View Project</a>
+                </article>
             </div>
         </div>
+    </section>
+
+    <section id="education">
+        <div class="container">
+            <h2>Education & Certifications</h2>
+            <div class="education-grid">
+                <article class="education-card">
+                    <h3>Bachelor's Degree</h3>
+                    <p>Information Systems from Mercu Buana University (Sep 2019 - Feb 2024)</p>
+                </article>
+                <article class="education-card">
+                    <h3>Certifications</h3>
+                    <p>BNSP Certified, EC-Council Certified Secure Computer User, Cisco Certification Network Associate (CCNA), IBM certifications in AI & Cybersecurity.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>Location: South Tangerang City, Banten, Indonesia</p>
+            <p>Email: fiasseikha@gmail.com | Phone: +62895327774755</p>
+            <p><a href="https://linkedin.com" class="social-link">LinkedIn</a></p>
+            <form>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Fiastara Seikha Arthanev. All rights reserved.</p>
+        <a href="https://linkedin.com" class="social-link">LinkedIn</a>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Initialize Scrollspy
+        var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+            target: '#navbar-nav',
+            offset: 70
+        });
+
+        // Initialize Typed.js
+        var typed = new Typed('#typed-text', {
+            strings: ['Web Developer', 'Fullstack Engineer', 'UI/UX Designer', 'Data Analyst'],
+            typeSpeed: 100,
+            backSpeed: 50,
+            loop: true
+        });
+    </script>
+</body>
+</html>
