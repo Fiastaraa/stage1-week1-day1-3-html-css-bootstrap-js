@@ -1,10 +1,5 @@
-# TODO List for Add Project Feature
-
-- [x] Create addproject.html: Form page for adding projects
-- [x] Create addproject.css: Styling consistent with site theme
-- [x] Create addproject.js: Handle form submission, validation, localStorage storage, and display projects
-- [x] Create project-detail.html: Page to display individual project details
-- [x] Create project-detail.js: Script to load and display project data from localStorage based on URL parameter
-- [ ] Test the pages locally to ensure functionality
-- [ ] Ensure localStorage persistence across sessions
-- [ ] Integrate navigation links if needed (e.g., add "Add Project" to main nav)
+- [x] Update js/addproject.js: Remove undefined technologies property, add dynamic event listeners for search and filters, implement editProject, deleteProject, and handleEditFormSubmit functions
+- [x] Update js/project-detail.js: Remove technologies display in project details
+- [x] Test adding, editing, deleting projects
+- [x] Test search and filter functionality
+- [x] Verify project details display correctly

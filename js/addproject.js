@@ -85,7 +85,6 @@ function handleFormSubmit(event) {
             category: projectCategory,
             date: projectDate,
             status: projectStatus,
-            technologies: projectTechnologies,
             link: projectLink,
             tags: projectTags
         };
@@ -109,6 +108,93 @@ function handleFormSubmit(event) {
     reader.readAsDataURL(projectImageFile);
 }
 
+// Function to edit project
+function editProject(index) {
+    const projects = getProjects();
+    const project = projects[index];
+
+    // Populate edit form
+    document.getElementById('editProjectIndex').value = index;
+    document.getElementById('editProjectName').value = project.name;
+    document.getElementById('editProjectDescription').value = project.description;
+    document.getElementById('editProjectCategory').value = project.category;
+    document.getElementById('editProjectDate').value = project.date;
+    document.getElementById('editProjectStatus').value = project.status;
+    document.getElementById('editProjectLink').value = project.link;
+    document.getElementById('editProjectTags').value = project.tags;
+
+    // Show edit modal
+    const editModal = new bootstrap.Modal(document.getElementById('editProjectModal'));
+    editModal.show();
+}
+
+// Function to delete project
+function deleteProject(index) {
+    if (confirm('Are you sure you want to delete this project?')) {
+        const projects = getProjects();
+        projects.splice(index, 1);
+        saveProjects(projects);
+        displayProjects();
+        alert('Project deleted successfully!');
+    }
+}
+
+// Function to handle edit form submission
+function handleEditFormSubmit(event) {
+    event.preventDefault();
+
+    const index = document.getElementById('editProjectIndex').value;
+    const projectName = document.getElementById('editProjectName').value.trim();
+    const projectDescription = document.getElementById('editProjectDescription').value.trim();
+    const projectImageFile = document.getElementById('editProjectImage').files[0];
+    const projectCategory = document.getElementById('editProjectCategory').value;
+    const projectDate = document.getElementById('editProjectDate').value;
+    const projectStatus = document.getElementById('editProjectStatus').value;
+    const projectLink = document.getElementById('editProjectLink').value.trim();
+    const projectTags = document.getElementById('editProjectTags').value.trim();
+
+    if (!projectName || !projectDescription || !projectCategory || !projectDate || !projectStatus || !projectLink) {
+        alert('Please fill in all required fields.');
+        return;
+    }
+
+    const projects = getProjects();
+    const project = projects[index];
+
+    if (projectImageFile) {
+        // Convert new image file to data URL
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            project.image = e.target.result;
+            updateProject();
+        };
+        reader.readAsDataURL(projectImageFile);
+    } else {
+        updateProject();
+    }
+
+    function updateProject() {
+        project.name = projectName;
+        project.description = projectDescription;
+        project.category = projectCategory;
+        project.date = projectDate;
+        project.status = projectStatus;
+        project.link = projectLink;
+        project.tags = projectTags;
+
+        saveProjects(projects);
+
+        // Close modal
+        const modal = bootstrap.Modal.getInstance(document.getElementById('editProjectModal'));
+        modal.hide();
+
+        // Refresh projects list
+        displayProjects();
+
+        alert('Project updated successfully!');
+    }
+}
+
 // Event listeners
 document.addEventListener('DOMContentLoaded', function() {
     displayProjects();
@@ -116,5 +202,25 @@ document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('addProjectForm');
     if (form) {
         form.addEventListener('submit', handleFormSubmit);
+    }
+
+    const editForm = document.getElementById('editProjectForm');
+    if (editForm) {
+        editForm.addEventListener('submit', handleEditFormSubmit);
+    }
+
+    // Add event listeners for search and filters
+    const searchInput = document.getElementById('searchInput');
+    const categoryFilter = document.getElementById('categoryFilter');
+    const statusFilter = document.getElementById('statusFilter');
+
+    if (searchInput) {
+        searchInput.addEventListener('input', displayProjects);
+    }
+    if (categoryFilter) {
+        categoryFilter.addEventListener('change', displayProjects);
+    }
+    if (statusFilter) {
+        statusFilter.addEventListener('change', displayProjects);
     }
 });
